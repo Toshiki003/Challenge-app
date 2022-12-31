@@ -1,0 +1,23 @@
+
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="mx-auto w-full max-w-[550px]">
+    <%= form_with model: @challenge, local: true do |f| %>
+      <div class="mb-5">
+        <%= f.label :nickname, class:"mb-3 block text-base font-medium text-[#07074D]"%>
+        <%= f.text_field :nickname, class:'w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'%>
+      </div>
+      <div class="mb-5">
+        <%= f.label :timing, class:"mb-3 block text-base font-medium text-[#07074D]"%>
+        <%= f.select :timing, [["今すぐ", 1], ["今日中", 2], ["正月三が日の間には必ず!", 3]], { include_blank: false, selected: 1 }, { class:'w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md', id: "timing"} %>
+      </div>
+      <div class="mb-5">
+        <%= f.label :category, class:"mb-3 block text-base font-medium text-[#07074D]"%>
+        <%= f.select :category, [ ["運動", "運動"], ["生活", "生活"], ["RUNTEQ", "RUNTEQ"] ], { include_blank: false, selected: 1 }, { class:'w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md', id: 'category'} %>
+      </div>
+      <div class="mb-5">
+        <%= f.submit "決めた!", class:"hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none" %>
+      </div>
+     
+    <% end %>
+  </div>

@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2022_12_31_130506) do
   create_table "challenges", force: :cascade do |t|
     t.string "nickname", limit: 30
-    t.string "timing"
+    t.integer "timing"
     t.string "category"
     t.string "todo"
     t.datetime "created_at", null: false

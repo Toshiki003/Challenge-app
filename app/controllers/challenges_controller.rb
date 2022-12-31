@@ -1,10 +1,10 @@
-class ChallengeController < ApplicationController
+class ChallengesController < ApplicationController
   def index
     @challenges = Challenge.all.order(created_at: :desc)
   end
 
   def new
-    @challenge =Challenge.new
+    @challenge = Challenge.new
   end
 
   def create
@@ -21,7 +21,7 @@ class ChallengeController < ApplicationController
   end
 
   private
-  
+
   def challenge_params
     params.require(:challenge).permit(:nickname, :timing, :category)
   end
