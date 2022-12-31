@@ -81,7 +81,7 @@ class Challenge < ApplicationRecord
           人に優しくしてみる
         ]
       },
-      'RUNTEQ CREDO' => {
+      'RUNTEQ' => {
         1 => %w[
           twitterで新年のご挨拶ツイートをしてみる
           timesで今年の目標を宣言してみる
